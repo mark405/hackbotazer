@@ -1,23 +1,25 @@
 from sqlalchemy import select
 
 from bot.database.models import UserProgress
+from bot.database.other_db import OtherSessionLocal
 
 
-async def save_step(session, telegram_id: int, step: str, username: str):
-    result = await session.execute(
-        select(UserProgress).filter_by(telegram_id=telegram_id, bot_name="hackbotazer")
-    )
-    progress = result.scalar_one_or_none()
-
-    if progress:
-        progress.last_step = step
-    else:
-        progress = UserProgress(
-            telegram_id=telegram_id,
-            last_step=step,
-            bot_name="hackbotazer",
-            username=username
+async def save_step(telegram_id: int, step: str, username: str):
+    async with OtherSessionLocal() as session:
+        result = await session.execute(
+            select(UserProgress).filter_by(telegram_id=telegram_id, bot_name="hackbotruc")
         )
-        session.add(progress)
+        progress = result.scalar_one_or_none()
 
-    await session.commit()
+        if progress:
+            progress.last_step = step
+        else:
+            progress = UserProgress(
+                telegram_id=telegram_id,
+                last_step=step,
+                bot_name="hackbotruc",
+                username=username
+            )
+            session.add(progress)
+
+        await session.commit()
