@@ -18,45 +18,44 @@ awaiting_ids = {}
 
 continue_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="▶️ Продовжити", callback_data="continue_flow")]
+        [InlineKeyboardButton(text="▶️ Davam et", callback_data="continue_flow")]
     ]
 )
 
 how_it_works_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="🔥 Дізнатись, як це працює", callback_data="how_it_works")],
-        [InlineKeyboardButton(text="🆘 Допомога", callback_data="help")]
+        [InlineKeyboardButton(text="🔥 Necə işləyir öyrən", callback_data="how_it_works")],
+        [InlineKeyboardButton(text="🆘 Kömək", callback_data="help")]
     ]
 )
 
 instruction_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="🚀 Отримати доступ до інструкції", callback_data="get_instruction")],
-        [InlineKeyboardButton(text="🆘 Допомога", callback_data="help")]
+        [InlineKeyboardButton(text="🚀 Təlimata daxil ol", callback_data="get_instruction")],
+        [InlineKeyboardButton(text="🆘 Kömək", callback_data="help")]
     ]
 )
 
 reg_inline_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="🔗 ПОСИЛАННЯ ДЛЯ РЕЄСТРАЦІЇ", callback_data="reg_link")],
-        [InlineKeyboardButton(text="✅ Я ЗАРЕЄСТРУВАВСЯ", callback_data="registered")],
-        [InlineKeyboardButton(text="⬅️ Назад", callback_data="back_to_start")],
-        [InlineKeyboardButton(text="🆘 Допомога", callback_data="help")]
+        [InlineKeyboardButton(text="🔗 Qeydiyyat linki", callback_data="reg_link")],
+        [InlineKeyboardButton(text="✅ Mən qeydiyyatdan keçdim", callback_data="registered")],
+        [InlineKeyboardButton(text="⬅️ Geri", callback_data="back_to_start")],
+        [InlineKeyboardButton(text="🆘 Kömək", callback_data="help")]
     ]
 )
 
 games_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton(text="💎 MINES 💎", web_app=WebAppInfo(url=f"{WEBAPP_BASE_URL}/minesexplorer-ukr")),
-            InlineKeyboardButton(text="⚽ GOAL ⚽", web_app=WebAppInfo(url=f"{WEBAPP_BASE_URL}/goalrush-ukr"))
+            InlineKeyboardButton(text="💎 MINES 💎", web_app=WebAppInfo(url=f"{WEBAPP_BASE_URL}/minesexplorer-azer")),
+            InlineKeyboardButton(text="⚽ GOAL ⚽", web_app=WebAppInfo(url=f"{WEBAPP_BASE_URL}/goalrush-azer"))
         ],
         [
-            InlineKeyboardButton(text="✈️ AVIATRIX ✈️",
-                                 web_app=WebAppInfo(url=f"{WEBAPP_BASE_URL}/aviatrixflymod-ukr")),
-            InlineKeyboardButton(text="🥅 PENALTY 🥅", web_app=WebAppInfo(url=f"{WEBAPP_BASE_URL}/penaltygame-ukr"))
+            InlineKeyboardButton(text="✈️ AVIATRIX ✈️", web_app=WebAppInfo(url=f"{WEBAPP_BASE_URL}/aviatrixflymod-azer")),
+            InlineKeyboardButton(text="🥅 PENALTY 🥅", web_app=WebAppInfo(url=f"{WEBAPP_BASE_URL}/penaltygame-azer"))
         ],
-        [InlineKeyboardButton(text="🆘 Допомога", callback_data="help")]
+        [InlineKeyboardButton(text="🆘 Kömək", callback_data="help")]
     ]
 )
 
@@ -65,16 +64,16 @@ games_keyboard = InlineKeyboardMarkup(
 
 async def send_start_text(bot: Bot, target, is_edit: bool = False):
     text = (
-        "👋 Вітаю!\n\n"
-        "Ти потрапив у бот, який використовують для отримання доходу на онлайн-іграх за допомогою автоматизованої аналітики.\n\n"
-        "Система створена так, щоб навіть новачок міг швидко розібратись і почати діяти без складнощів та досвіду.\n\n"
-        "💰 Користувачі, які чітко дотримуються інструкцій, заробляють 100–300$ вже з першого дня, працюючи з телефону та з дому.\n\n"
-        "❗️ Важливо:\n"
-        "❌ нічого зламувати не потрібно\n"
-        "❌ спеціальних знань не потрібно\n"
-        "❌ все вже налаштовано за тебе\n\n"
-        "Увесь процес розписаний покроково — 10–15 хвилин, і ти повністю розумієш, що робити далі.\n\n"
-        "👇 Тисни кнопку нижче:"
+        "👋 Salam!\n\n"
+        "Siz bota daxil oldunuz, bu bot avtomatlaşdırılmış analiz vasitəsilə onlayn oyunlardan gəlir əldə etmək üçün istifadə olunur.\n\n"
+        "Sistem yeni başlayanlar üçün belə sadədir ki, heç bir təcrübə olmadan tez başlaya bilərsiniz.\n\n"
+        "💰 Təlimatlara əməl edən istifadəçilər 1-ci gündən 100–300$ qazanırlar, mobil telefon və evdən işləyərək.\n\n"
+        "❗️ Vacib:\n"
+        "❌ Heç nə sındırmaq lazım deyil\n"
+        "❌ Xüsusi bilik lazım deyil\n"
+        "❌ Hər şey sizin üçün hazırdır\n\n"
+        "Bütün proses addım-addım izah edilib — 10–15 dəqiqə, və siz növbəti addımı tam anlayacaqsınız.\n\n"
+        "👇 Aşağıdakı düyməni basın:"
     )
     if is_edit:
         await target.edit_text(text=text, reply_markup=how_it_works_keyboard)
@@ -91,11 +90,11 @@ async def send_access_granted_message(bot: Bot, message: Message, user_lang: str
     # user_lang оставляем как параметр, чтобы не ломать остальную логику
     keyboard = games_keyboard
     text = (
-        "✅ ДОСТУП ОТРИМАНО ✅\n\n"
-        "🔴 Інструкція:\n"
-        "1️⃣ Виберіть гру нижче\n"
-        "2️⃣ Відкрийте її на сайті\n"
-        "3️⃣ Отримайте сигнал і повторіть його в грі ➕ 🐝"
+        "✅ GİRİŞ İCAZƏ EDİLDİ ✅\n\n"
+        "🔴 Təlimat:\n"
+        "1️⃣ Aşağıdakı oyunu seçin\n"
+        "2️⃣ Onu veb-saytda açın\n"
+        "3️⃣ Siqnalı alın və oyunda təkrarlayın ➕ 🐝"
     )
     await message.answer(text, reply_markup=keyboard)
 
@@ -110,16 +109,16 @@ async def send_access_granted_message(bot: Bot, message: Message, user_lang: str
 async def start_handler(message: Message):
     try:
         await message.answer(
-            "👋 Вітаю!\n\n"
-            "Ти потрапив у бот, який використовують для отримання доходу на онлайн-іграх за допомогою автоматизованої аналітики.\n\n"
-            "Система створена так, щоб навіть новачок міг швидко розібратись і почати діяти без складнощів та досвіду.\n\n"
-            "💰 Користувачі, які чітко дотримуються інструкцій, заробляють 100–300$ вже з першого дня, працюючи з телефону та з дому.\n\n"
-            "❗️ Важливо:\n"
-            "❌ нічого зламувати не потрібно\n"
-            "❌ спеціальних знань не потрібно\n"
-            "❌ все вже налаштовано за тебе\n\n"
-            "Увесь процес розписаний покроково — 10–15 хвилин, і ти повністю розумієш, що робити далі.\n\n"
-            "👇 Тисни кнопку нижче:",
+            "👋 Salam!\n\n"
+            "Siz bota daxil oldunuz, bu bot avtomatlaşdırılmış analiz vasitəsilə onlayn oyunlardan gəlir əldə etmək üçün istifadə olunur.\n\n"
+            "Sistem yeni başlayanlar üçün belə sadədir ki, heç bir təcrübə olmadan tez başlaya bilərsiniz.\n\n"
+            "💰 Təlimatlara əməl edən istifadəçilər 1-ci gündən 100–300$ qazanırlar, mobil telefon və evdən işləyərək.\n\n"
+            "❗️ Vacib:\n"
+            "❌ Heç nə sındırmaq lazım deyil\n"
+            "❌ Xüsusi bilik lazım deyil\n"
+            "❌ Hər şey sizin üçün hazırdır\n\n"
+            "Bütün proses addım-addım izah edilib — 10–15 dəqiqə, və siz növbəti addımı tam anlayacaqsınız.\n\n"
+            "👇 Aşağıdakı düyməni basın:",
             reply_markup=how_it_works_keyboard
         )
 
@@ -186,14 +185,14 @@ async def back_to_start(callback: CallbackQuery):
 async def how_it_works(callback: CallbackQuery):
     await callback.answer()
     await callback.message.edit_text(
-        "Основа системи — Telegram-бот з аналітичним модулем, який працює зі статистикою міні-ігор та повторюваними сценаріями.\n\n"
-        "⚙️ Що саме він робить:\n"
-        " • 📊 Аналізує серії виграшів і програшів\n"
-        " • 🔄 Визначає повторювані патерни\n"
-        " • ✅ Показує оптимальну послідовність дій\n\n"
-        "<b>🛡 Ти не ризикуєш навмання і не приймаєш рішення «на удачу».</b>\n\n"
-        "Твоє завдання просте: повторювати готову схему, яку дає бот, вже на реальній платформі.\n\n"
-        "👇 Тисни кнопку нижче:",
+        "Sistemin əsası — Telegram-bot, oyun statistikası və təkrarlanan ssenarilərlə işləyir.\n\n"
+        "⚙️ Bot nə edir:\n"
+        " • 📊 Qalib və məğlub seriyalarını analiz edir\n"
+        " • 🔄 Təkrarlanan nümunələri müəyyən edir\n"
+        " • ✅ Ən yaxşı addım ardıcıllığını göstərir\n\n"
+        "<b>🛡 Təsadüfi risk yoxdur, qərarlar \"təsadüfi\" deyil.</b>\n\n"
+        "Sizin işiniz sadədir: botun verdiyi hazır sxemi real platformada təkrarlamaq.\n\n"
+        "👇 Aşağıdakı düyməni basın:",
         reply_markup=instruction_keyboard,
         parse_mode="HTML"
     )
@@ -207,12 +206,12 @@ async def get_instruction(callback: CallbackQuery):
     await callback.answer()
 
     await callback.message.answer(
-        "1️⃣ Зареєструй акаунт на платформі, до якої підключений бот (посилання нижче).\n"
-        "2️⃣ Після реєстрації скопіюй ID свого акаунта.\n"
-        "3️⃣ Надішли ID сюди в бот.\n\n"
-        "💡 Для чого це потрібно? Це необхідно, щоб система синхронізувалася саме з твоїм профілем.\n"
-        "⚠️ Без ID бот не зможе активувати аналітику.\n"
-        "🎥 Нижче я додав коротку відео-інструкцію, щоб тобі було простіше."
+        "1️⃣ Botun qoşulduğu platformada hesab yaradın (aşağıdakı link).\n"
+        "2️⃣ Qeydiyyatdan sonra hesabınızın ID-sini kopyalayın.\n"
+        "3️⃣ ID-ni buraya bot vasitəsilə göndərin.\n\n"
+        "💡 Niyə bu lazımdır? Sistem yalnız sizin profilinizlə sinxronizasiya oluna bilsin deyə.\n"
+        "⚠️ ID olmadan bot analitikanı aktiv edə bilməyəcək.\n"
+        "🎥 Aşağıda qısa video-təlimat əlavə etdim ki, sizin üçün asanlaşsın."
     )
 
     video_file_id = "BAACAgIAAxkBAAIW1mmZ70Pxs33ok-Hb7ottbnU1E_W-AAKqkAACV27RSHAEwXqQ2LrLOgQ"
@@ -221,24 +220,14 @@ async def get_instruction(callback: CallbackQuery):
     await asyncio.sleep(15)
 
     await callback.message.answer(
-        "💸 Твій перший прибуток вже зовсім поруч! Всього один крок відділяє тебе від старту. "
-        "Реєструйся зараз, щоб заробити свої перші гроші вже сьогодні.",
+        "💸 İlk qazancınız artıq çox yaxındadır! Başlamağa yalnız bir addım qaldı. "
+        "İndi qeydiyyatdan keçin və ilk pulunuzu bu gün qazanın.",
         reply_markup=reg_inline_keyboard
     )
     username = callback.message.from_user.username or f"user_{callback.message.from_user.id}"
 
     async with SessionLocal() as session:
         await save_step(session, callback.from_user.id, "instruction", username)
-
-
-# @router.message()
-# async def debug_media(message: Message):
-#     if message.video:
-#         logging.info(f"VIDEO FILE_ID: {message.video.file_id}")
-#     elif message.document:
-#         logging.info(f"DOCUMENT FILE_ID: {message.document.file_id}")
-#     else:
-#         logging.info(f"MESSAGE: {message.model_dump()}")
 
 
 # --- Регистрация пользователя через кнопку ---
@@ -271,14 +260,15 @@ async def send_registration_link(callback: CallbackQuery):
 @router.callback_query(F.data == "help")
 async def help_callback(callback: CallbackQuery):
     await callback.answer()
-    await callback.message.answer("Напишіть підтримці:\n@supp_winbot")
+    await callback.message.answer("Dəstəyə yazın:\n@supp_winbot")
 
 
 @router.callback_query(F.data == "registered")
 async def registered(callback: CallbackQuery):
     await callback.answer()
     awaiting_ids[callback.from_user.id] = True
-    await callback.message.answer("🔢 Вкажи ID свого нового акаунта (тільки цифри)")
+    await callback.message.answer("🔢 Yeni hesabınızın ID-sini daxil edin (yalnız rəqəmlər)")
+
 
 @router.callback_query(F.data == "continue_flow")
 async def continue_flow(callback: CallbackQuery):
@@ -286,7 +276,7 @@ async def continue_flow(callback: CallbackQuery):
 
     async with SessionLocal() as session:
         result = await session.execute(
-            select(UserProgress).filter_by(telegram_id=callback.from_user.id, bot_name="hackbotukr")
+            select(UserProgress).filter_by(telegram_id=callback.from_user.id, bot_name="hackbotazer")
         )
         progress = result.scalar()
 
@@ -321,24 +311,25 @@ async def process_user_message(message: Message):
         logging.info(f"Received video from user {message.from_user.id}: {message.video.file_id}")
         return
     if message.text.startswith("/"):
-        print(f"❓ Ненадіслана команда: {message.text}")
-        await message.answer("❗ Невідома команда.")
+        print(f"❓ Göndərilməmiş əmr: {message.text}")
+        await message.answer("❗ Naməlum əmr.")
         return
 
     if message.from_user.id not in awaiting_ids:
         return
 
     if not message.text.isdigit():
-        await message.answer("❌ Введи тільки цифри.")
+        await message.answer("❌ Yalnız rəqəmləri daxil edin.")
         return
+
     username = message.from_user.username or f"user_{message.from_user.id}"
 
     async with SessionLocal() as session:
         await save_step(session, message.from_user.id, "entered_id", username)
 
-    await message.answer("🔍 Перевіряю ID у базі...")
-    await send_access_granted_message(message.bot, message, "uk")
-    awaiting_ids.pop(message.from_user.id, None)
+    await message.answer("🔍 Bazada ID yoxlanılır...")
+    await send_access_granted_message(message.bot, message, "az")
+    await awaiting_ids.pop(message.from_user.id, None)
 
 # --- Неизвестные колбэки ---
 
@@ -357,6 +348,6 @@ async def catch_unhandled_callbacks(callback: CallbackQuery):
             user_result = await session.execute(select(User).filter_by(telegram_id=callback.from_user.id))
             user = user_result.scalar()
 
-        text = "Ви натиснули невідому кнопку!"
+        text = "Naməlum düyməyə basdınız!"
         await callback.message.answer(text)
 

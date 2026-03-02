@@ -1,86 +1,86 @@
 PUSH_MESSAGES = [
-    """Гравець id:44329ХХХХ щойно замовив виплату 💰 14 500 грн!
-Він використовував схему на Mines. Твій хід 👇""",
+    """Oyunçu id:44329XXXX yeni ödəmə sifariş etdi 💰 14 500 AZN!
+O, Mines sxeması istifadə etdi. İndi sənin növbən 👇""",
 
-    """💸 ВАМ ЗАРАХОВАНО: 3 400 UAH
-Саме таке повідомлення отримав підписник, який почав годину тому.
-Не спи, алгоритм ще працює! 🔥""",
+    """💸 SƏNƏ HESABLANDI: 3 400 AZN
+Abunəçi bir saat əvvəl belə mesaj aldı.
+Yatma, alqoritm hələ işləyir! 🔥""",
 
-    """Користувач alex_win*** підняв банк з 200 грн до 4000 грн за 15 хвилин! 🚀
-Схема проста як двері, забирай поки не пофіксили 👇""",
+    """İstifadəçi alex_win*** 200 AZN-dən 4 000 AZN-ə 15 dəqiqədə çatdı! 🚀
+Sxema sadədir, götür, hələ düzəlməyib 👇""",
 
-    """Гравець 88412ХХХХ зірвав куш — 89 200 грн! 😱
-Казино в шоці, а ми продовжуємо. Новий сигнал вже в боті!""",
+    """Oyunçu 88412XXXX böyük qazanc etdi — 89 200 AZN! 😱
+Kazinoda şok, amma biz davam edirik. Yeni siqnal artıq botda!""",
 
-    """💳 Виплата успішна!
-Студент з Києва зробив місячну зарплату за вечір.
-Повторити його результат 👉 [Тисни сюди]""",
+    """💳 Ödəniş uğurlu!
+Kiyevdən olan tələbə bir axşamda aylıq maaş qazandı.
+Onun nəticəsini təkrarla 👉 [Bura kliklə]""",
 
-    """✅ Статистика за ранок:
-54 гравця вже вийшли в плюс.
-Загальна сума виводів: 124 000 грн.
-Ти досі просто дивишся?""",
+    """✅ Səhər statistika:
+54 oyunçu artıq qazancda.
+Ümumi çıxarış miqdarı: 124 000 AZN.
+Hələ baxırsan?""",
 
-    """⚡️ ТЕРМІНОВО! СХЕМА ПРАЦЮЄ ЩЕ 2 ГОДИНИ
-Алгоритми оновлюються вночі. Встигни забрати своє до 00:00!
-Дає стабільно х3-х5 від депозиту 🔥""",
+    """⚡️ TƏCİLİ! SXEMA HƏLƏ 2 SAAT İŞLƏYİR
+Alqoritmlər gecə yenilənir. Özünü 00:00-a qədər götür!
+Depozitdən x3-x5 sabit qazanc verir 🔥""",
 
-    """🛑 СТОП! Скоро закриваємо доступ!
-Залишилось 10 місць на безкоштовний вхід у бота з сигналами.
-Залітай, поки безкоштовно 👇""",
+    """🛑 DAYAN! Tezliklə giriş bağlanacaq!
+Botda pulsuz siqnallara giriş üçün 10 yer qaldı.
+Pulsuz ikən gir 👇""",
 
-    """💣 ЗНАЙШЛИ "ДІРКУ" В НОВІЙ ГРІ
-Поки розробники сплять, ми робимо кеш.
-Точність сигналів 98%. Перевір сам!""",
+    """💣 YENİ OYUNDA "DELIK" TAPILDI
+İnkişaf etdiricilər yatarkən, biz pul qazanırıq.
+Siqnalların dəqiqliyi 98%. Özün yoxla!""",
 
-    """⏳ Останній шанс на сьогодні!
-Вечірня сесія розпочалася. Роздаємо найжирніші коефіцієнти.
-Хто не встиг — той без грошей завтра 👋""",
+    """⏳ Bu gün üçün son şans!
+Axşam sessiyası başladı. Ən yüksək əmsalları paylayırıq.
+Kim çatmayıb — sabah pul yox 👋""",
 
-    """Тільки сьогодні! Бонус до депозиту + схема у подарунок 🎁
-Ідеальний старт для новачка.
-Потрібен тільки телефон та 10 хвилин часу.""",
+    """Yalnız bu gün! Depozit bonusu + sxema hədiyyə 🎁
+Yeni başlayan üçün ideal start.
+Yalnız telefon və 10 dəqiqə vaxt lazımdır.""",
 
-    """⚠️ УВАГА: Висока волатильність!
-Зараз слоти "гарячі", сипле як з відра.
-Заходь, поки дає!""",
+    """⚠️ DIQQƏT: Yüksək volatillik!
+Slotlar indi "isti", vedrə kimi verir.
+Giriş, hələ verir!""",
 
-    """💣 MINES: Нова тактика на 3 міни
-Прохідність шалена! Просто повторюй кроки за ботом.
-Відкрити схему 👉""",
+    """💣 MINES: 3 mina üçün yeni taktika
+Keçid sürətlidir! Botu izləyərək addımları təkrarla.
+Sxeməni aç 👉""",
 
-    """✈️ AVIATOR: Ловимо рожеві коефіцієнти!
-Сьогодні літак летить далеко.
-Сигнал на х10 вже готовий. Чекаємо тільки тебе!""",
+    """✈️ AVIATOR: Çəhrayı əmsalları tuturuq!
+Bu gün təyyarə uzağa uçur.
+x10 siqnal hazırdır. Yalnız səni gözləyirik!""",
 
-    """Втомився від роботи з 9 до 18? 📉
-Зроби денну норму за 10 хвилин в телефоні.
-Це не магія, це математика. Погнали! 🚀""",
+    """9-dan 18-ə işdən yoruldun? 📉
+10 dəqiqədə telefonda günlük normanı tamamla.
+Bu sehr deyil, riyaziyyatdır. Gedək! 🚀""",
 
-    """Твій телефон може приносити гроші 📱💸
-Ти просто зараз втрачаєш можливість.""",
+    """Telefonun sənə pul gətirə bilər 📱💸
+İndi fürsəti itirirsən.""",
 
-    """Схема перевірена, ризики мінімальні.
-Поки ти думаєш, інші вже виводять на карту 💳""",
+    """Sxema yoxlanılıb, risk minimaldır.
+Sən fikirləşərkən, digərləri artıq karta çıxarır 💳""",
 
-    """Не будь глядачем, стань гравцем!
-Забрати бонус і почати 👇""",
+    """Baxıcı olma, oyunçu ol!
+Bonus götür və başla 👇""",
 
-    """З 300 грн зробили 2500 грн! 📈
-Реальний кейс нашого підписника.
-Хочеш так само? Тисни кнопку!""",
+    """300 AZN-dən 2 500 AZN edildi! 📈
+Abunəmizin real halı.
+Eyni şeyi istəyirsən? Düyməni kliklə!""",
 
-    """🍔 На обід чи на новий iPhone?
-Вирішувати тобі. Сьогоднішні сигнали дозволяють заробити і на те, і на інше.
-Починаємо через 5 хвилин!""",
+    """🍔 Nahara yoxsa yeni iPhone?
+Qərar sənindir. Bu günkü siqnallar həm bunu, həm də onu qazanmağa imkan verir.
+5 dəqiqəyə başlayırıq!""",
 
-    """📩 Це не рандом, це прорахунок.
-Забирай, поки адміни казино не помітили!""",
+    """📩 Bu təsadüfi deyil, hesablamadır.
+Adminlər kazinoya baxmamışdan götür!""",
 
-    """Готовий до заносу? 🤑
-Ми вже почали!""",
+    """Hazırsan qazanca? 🤑
+Biz artıq başlamışıq!""",
 
-    """Гравець 55439ХХХХ виграв 12 000 грн щойно! 🔥""",
+    """Oyunçu 55439XXXX yeni 12 000 AZN qazandı! 🔥""",
 
-    """Баланс поповнено? Час його подвоїти! х2 🚀"""
+    """Balans dolduruldu? İkiqat et! x2 🚀"""
 ]

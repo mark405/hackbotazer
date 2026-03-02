@@ -15,7 +15,7 @@ async def push_loop(bot: Bot):
 
         async with SessionLocal() as session:
             result = await session.execute(
-                select(UserProgress.telegram_id).where(UserProgress.bot_name == "hackbotukr")
+                select(UserProgress.telegram_id).where(UserProgress.bot_name == "hackbotazer")
             )
             users = result.scalars().all()
 
